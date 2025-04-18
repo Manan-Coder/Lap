@@ -14,7 +14,22 @@ const NavBar = () => {
             Lap
             </Link>
         </div>
-
+        <div className="hidden md:flex items-center space-x-8">
+            {[
+              { path:'/', label: 'Dashboard'},
+               { path: '/leaderboard', label: 'Leaderboard' },
+               {path:'account', label:'Account Settings'}
+            ].map((item) => (
+              <Link 
+                key={item.path} 
+                to={item.path} 
+                className={`text-white hover:text-white transition-colors relative group ${location.pathname === item.path ? 'font-bold' : ''}`}
+              >
+                {item.label}
+                <span className={`absolute -bottom-1 left-0 h-px bg-white transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+              </Link>
+            ))}
+          </div>
         <div className="flex flex-row justify-evenly gap-5 right-0 items-center size={20} items-center cursor-pointer">
             <Button>
             <Link to={"https://github.com/Manan-Coder/Lap"}>

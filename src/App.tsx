@@ -1,13 +1,20 @@
 import NavBar from "./components/NavBar.tsx";
-import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/Footer.tsx";
 import Landing from "./pages/landing.tsx";
+import Leaderboard from "./pages/leaderboard.tsx";
+import Account from "./pages/account.tsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => (
   <BrowserRouter>
 <div className="flex flex-col h-screen">
   <NavBar />
   <main className="flex-1">
-<Landing /></main>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/leaderboard" element={<Leaderboard />} />
+      <Route path="/account" element={<Account />} />
+    </Routes>
+</main>
   <Footer/>
 </div></BrowserRouter>
 )
