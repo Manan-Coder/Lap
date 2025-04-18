@@ -53,7 +53,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Custom space theme colors - updated to monochrome palette
+
 				space: {
 					dark: "#0F1113",
 					darker: "#050508", 
