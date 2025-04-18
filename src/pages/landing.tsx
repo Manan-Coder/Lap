@@ -31,9 +31,9 @@ const Landing = () => {
   <span className="absolute -bottom-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
   <span className="absolute -bottom-2 -right-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
          <Label className="text-2xl">{showLogin ? "Login" : "Signup"}</Label>
-            <Input type="email" placeholder="email" name="email" onFocusCapture={focusInp} onBlur={notFocusInp} required></Input>
+            <Input type="email" placeholder="email" name="email" onFocusCapture={focusInp} onBlur={notFocusInp} className="bg-space-dark" required></Input>
             <div className="flex flex-row items-center gap-5">
-            <Input type= {showpwd ? "text" : "password"} placeholder="password" id="password" onFocusCapture={focusInp} onBlur={notFocusInp} required></Input>
+            <Input type= {showpwd ? "text" : "password"} placeholder="password" id="password" onFocusCapture={focusInp} onBlur={notFocusInp} required className="bg-space-dark"></Input>
             <Button onMouseEnter={() => setshowpwd(true)} onMouseLeave={() => setshowpwd(false)} className="bg-space-dark">
             {showpwd ? <Eye /> : <EyeClosed />}
             </Button>
