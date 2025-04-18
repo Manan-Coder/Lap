@@ -3,6 +3,7 @@ import Footer from "./components/Footer.tsx";
 import Landing from "./pages/landing.tsx";
 import Leaderboard from "./pages/leaderboard.tsx";
 import Account from "./pages/account.tsx";
+import About from "./pages/about.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 const App = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => (
       <Route path="/" element={<Landing />} />
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/account" element={<Account />} />
+      <Route path="/about" element={<About />} />
     </Routes>
 </main>
   <Footer/>

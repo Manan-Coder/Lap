@@ -18,7 +18,8 @@ const NavBar = () => {
             {[
               { path:'/', label: 'Dashboard'},
                { path: '/leaderboard', label: 'Leaderboard' },
-               {path:'account', label:'Account Settings'}
+               {path:'/account', label:'Account Settings'},
+               {path:'/about', label:'About'}
             ].map((item) => (
               <Link 
                 key={item.path} 
