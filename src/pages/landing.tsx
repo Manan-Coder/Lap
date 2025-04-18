@@ -21,14 +21,16 @@ const Landing = () => {
         <div className="flex flex-col items-center justify-between py-5 px-5 border  border-white/10" id="cont">
             <div className="bg-space-dark flex py-12 px-6 h-full w-full flex-col gap-10 items-center border border-white/10">
             <Label className="text-2xl">Login</Label>
-            <Input placeholder="email" name="email" onFocusCapture={focusInp} onBlur={notFocusInp}></Input>
+            <Input type="email" placeholder="email" name="email" onFocusCapture={focusInp} onBlur={notFocusInp} required></Input>
             <div className="flex flex-row items-center gap-5">
-            <Input type= {showpwd ? "text" : "password"} placeholder="password" id="password" onFocusCapture={focusInp} onBlur={notFocusInp}></Input>
+            <Input type= {showpwd ? "text" : "password"} placeholder="password" id="password" onFocusCapture={focusInp} onBlur={notFocusInp} required></Input>
             <Button onMouseEnter={() => setshowpwd(true)} onMouseLeave={() => setshowpwd(false)} className="bg-space-dark">
             {showpwd ? <Eye /> : <EyeClosed />}
             </Button>
             </div>
+            <div className="flex flex-col gap-6 justify-between cursor-pointer">
             <Button onMouseEnter={focusInp} onMouseLeave={notFocusInp}>Submit</Button>
+            <Label onClick={focusInp} className="cursor-pointer">signup instead?</Label></div>
             </div>
         </div>
 
