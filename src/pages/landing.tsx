@@ -12,15 +12,16 @@ const cont = document.getElementById("cont");
 cont.style.backgroundColor = "rgb(15, 17, 18)"
 
 }
-//const [showpwd,hidepwd] = useState(false)
+
 const Landing = () => {
     const [showpwd,setshowpwd] = useState(false)
+    const [showLogin,setshowLogin] = useState(true)
     return(
         <div className="w-full h-full flex items-center justify-center">
 
         <div className="flex flex-col items-center justify-between py-5 px-5 border  border-white/10" id="cont">
             <div className="bg-space-dark flex py-12 px-6 h-full w-full flex-col gap-10 items-center border border-white/10">
-            <Label className="text-2xl">Login</Label>
+            <Label className="text-2xl">{showLogin ? "Login" : "Signup"}</Label>
             <Input type="email" placeholder="email" name="email" onFocusCapture={focusInp} onBlur={notFocusInp} required></Input>
             <div className="flex flex-row items-center gap-5">
             <Input type= {showpwd ? "text" : "password"} placeholder="password" id="password" onFocusCapture={focusInp} onBlur={notFocusInp} required></Input>
@@ -30,7 +31,7 @@ const Landing = () => {
             </div>
             <div className="flex flex-col gap-6 justify-between cursor-pointer">
             <Button onMouseEnter={focusInp} onMouseLeave={notFocusInp}>Submit</Button>
-            <Label onClick={focusInp} className="cursor-pointer">signup instead?</Label></div>
+            <Label onClick={() => setshowLogin((s) => !s)} className="cursor-pointer" onMouseEnter={focusInp} onMouseLeave={notFocusInp}>{showLogin ? "No account? signup instead." : "Have an account? Login."}</Label></div>
             </div>
         </div>
 
