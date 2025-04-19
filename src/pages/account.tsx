@@ -10,7 +10,7 @@ const Account = () => {
     const hello = ["hello","hiii!"]
     const [showpwd, setshowpwd] = useState(false)
     const [showOtpSection, setShowOtpSection] = useState(false)
-
+    const [otpSent, setOtpSent] = useState(false)
     const togglePasswordVisibility = () => {
         setshowpwd(!showpwd);
     }
@@ -22,10 +22,10 @@ const Account = () => {
     return(
         <div className="h-full w-full flex items-center justify-center p-8 pt-28">
             <div className="py-5 px-5 bg-black max-w-4xl w-full mx-auto rounded-lg flex flex-col justify-center items-center gap-8">
-                <div className="text-4xl">
+                <div className="text-3xl text-center">
                    Account Information 
                 </div>
-                <div className="flex flex-row gap-20">
+                <div className="flex flex-row gap-10">
                     <div className="flex flex-col gap-4">
                         <div>email</div>
                         <div>API key</div>
