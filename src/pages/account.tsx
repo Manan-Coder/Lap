@@ -21,7 +21,13 @@ const Account = () => {
 
     return(
         <div className="h-full w-full flex items-center justify-center p-8 pt-28">
-            <div className="py-5 px-5 bg-black max-w-4xl w-full mx-auto rounded-lg flex flex-col justify-center items-center gap-8">
+            
+            <div className=" bg-space-dark max-w-4xl w-full mx-auto rounded-lg gap-8 flex flex-col items-center justify-between py-5 px-5 border border-dashed border-white/10 relative group">
+            <span className="absolute -top-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
+  <span className="absolute -top-2 -right-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
+  <span className="absolute -bottom-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
+  <span className="absolute -bottom-2 -right-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span> 
+  
                 <div className="text-3xl text-center">
                    Account Information 
                 </div>

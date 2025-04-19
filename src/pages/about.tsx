@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 const About = () => {
     return(
         <div className="h-full w-full flex items-center justify-center p-8 pt-28">
-            <div className="py-5 px-5 bg-black max-w-4xl w-full mx-auto rounded-lg flex flex-col gap-4">
+            <div className="py-5 px-5 bg-space-dark max-w-4xl w-full mx-auto rounded-lg flex flex-col gap-4  items-center justify-between  border border-dashed border-white/10 relative group">
+            <span className="absolute -top-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
+  <span className="absolute -top-2 -right-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
+  <span className="absolute -bottom-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
+  <span className="absolute -bottom-2 -right-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span> 
+  
                 <div className="text-4xl">
                    About 
                 </div>
