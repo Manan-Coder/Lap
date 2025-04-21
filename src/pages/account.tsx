@@ -78,7 +78,7 @@ const Account = () => {
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="flex flex-col justify-center items-center gap-4 w-full overflow-hidden"
+                            className="flex flex-col justify-center items-center gap-4 w-full overflow-hidden pt-1"
                         >
                             <div className="flex flex-row gap-4">
                                 <Input placeholder="enter OTP for password" className="w-56"></Input>
