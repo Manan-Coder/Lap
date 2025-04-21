@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const Leaderboard = () => {
+    const [daily, setDaily] = useState(true)
+    const [weekly, setWeekly] = useState(false)
 const daily_members = [
     {
         name: "Manan",
@@ -42,8 +45,12 @@ const weekly_members = [
 return(
     <div className="h-full w-full flex flex-col items-center justify-center p-8 pt-28 gap-6">
         <div className="flex flex-row gap-8">
-            <Button>Daily</Button>
-            <Button>Weekly</Button>
+            <Button onClick={() => {setDaily(true);
+        setWeekly(false);}}>Daily</Button>
+            <Button onClick={() => {
+                setDaily(false);
+                setWeekly(true);
+            }}>Weekly</Button>
         </div>
     <div className="py-5 px-5 bg-space-dark max-w-4xl w-full mx-auto rounded-lg flex flex-col gap-4  items-center justify-between  border border-dashed border-white/10 relative group">
     <span className="absolute -top-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
@@ -51,7 +58,7 @@ return(
 <span className="absolute -bottom-2 -left-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span>
 <span className="absolute -bottom-2 -right-2 h-4 w-4 bg-space-dark flex items-center justify-center text-white/60">+</span> 
 <div className="text-3xl">
-    Daily Leaderboard
+    {daily ? "Daily": "Weekly"} Leaderboard
 </div>
 <table className="w-full border-collapse">
     <thead>
@@ -61,7 +68,9 @@ return(
         </tr>
     </thead>
     <tbody>
-        {daily_members.sort((a,b) => b.time - a.time).map((member, index) => (
+        {(daily ? daily_members : weekly_members)
+        .sort((a,b) => b.time - a.time)
+        .map((member, index) => (
             <tr key={index} className="border-b border-gray-400 dark:border-gray-500">
                 <td className="p-4">{member.name}</td>
                 <td className="p-4">{(Math.round(member.time/60)+" hours" + " " + (member.time%60)+" minutes")}</td>
