@@ -18,7 +18,7 @@ const About = () => {
                     <br />
                     It's written in React,ChartJS, TypeScript, Rust, Javascript and styled with TailwindCSS.
                     <br />
-                    The functioning of lap is pretty simple and straightforward, there is a VS Code extension for Lap which fetched data like keyboard activity, file's name/type/dir, keys pressed etc.(VS Code provides this things to extensions so there isn't any rocket science, the extension just acts as a transporter, takes data from VS Code and sends it to the api.)
+                    The functioning of lap is pretty simple and straightforward, there is a VS Code extension for Lap which fetches data like keyboard activity, file's name/type/dir, keys pressed etc.(VS Code provides this things to extensions so there isn't any rocket science, the extension just acts as a transporter, takes data from VS Code and sends it to the api.)
                     <br />
                     Then the api collects the data and kind of puts it in the right containers, like separated things like language, file name/type, file dir, keys pressed etc. and saves it accordingly (this is probably the tricky part as sorting the is easy manually but making a automation for it is crazy confusing.)
                     <br />
@@ -26,7 +26,7 @@ const About = () => {
                     <br />
                     <br />
                     </div>
-                    So the flow of data looks smth like this - 
+                    So the flow of data looks something like this - 
                     <div className="flex flex-col justify-center items-center">
                         <br />
                         <div className="text-center">VS Code </div>
