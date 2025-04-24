@@ -5,8 +5,10 @@ import Leaderboard from "./pages/leaderboard.tsx";
 import Account from "./pages/account.tsx";
 import About from "./pages/about.tsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./components/AuthContext.tsx";
 const App = () => (
   <BrowserRouter>
+  <AuthProvider>
 <div className="flex flex-col h-screen">
   <NavBar />
   <main className="flex-1">
@@ -18,7 +20,8 @@ const App = () => (
     </Routes>
 </main>
   <Footer/>
-</div></BrowserRouter>
+</div>
+</AuthProvider></BrowserRouter>
 )
 
 export default App

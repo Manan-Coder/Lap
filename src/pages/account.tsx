@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp, Eye, EyeOff } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
-
+import { useAuth } from "@/components/AuthContext";
 const Account = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
@@ -12,7 +12,7 @@ const Account = () => {
     const [showpwd, setshowpwd] = useState(false)
     const [showOtpSection, setShowOtpSection] = useState(false)
     const [otpSent, setOtpSent] = useState(false)
-    
+    const {loggedIn, setLoggedIn} = useAuth();
     const togglePasswordVisibility = () => {
         setshowpwd(!showpwd);
     }
@@ -97,7 +97,7 @@ const Account = () => {
                         transition: { duration: 0.3, delay: showOtpSection ? 0.1 : 0 }
                     }}
                 >
-                    <Button className="bg-red-500 text-white hover:bg-red-700">Logout</Button>
+                    <Button className="bg-red-500 text-white hover:bg-red-700" onClick={() => setLoggedIn(false)}>Logout</Button>
                 </motion.div>
             </div>
         </div>

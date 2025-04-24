@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
-
+import { useAuth } from "@/components/AuthContext";
 function focusInp() {
   const cont = document.getElementById("cont");
   cont.style.backgroundColor = "rgb(8, 8, 8)";
@@ -14,11 +14,15 @@ function notFocusInp() {
   cont.style.backgroundColor = "rgb(15, 17, 18)";
 }
 
+
 const Landing = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const {loggedIn, setLoggedIn} = useAuth();
   const [showpwd, setshowpwd] = useState(false);
   const [showLogin, setshowLogin] = useState(true);
-
+  const handleLogin = () => {
+    // Your login logic here
+    setLoggedIn(true); // This will automatically update localStorage
+  };
   if (loggedIn) {
     return (
       <div className="w-full h-full flex items-center justify-center">
@@ -60,7 +64,7 @@ const Landing = () => {
             </Button>
           </div>
           <div className="flex flex-col gap-6 justify-between cursor-pointer">
-            <Button onMouseEnter={focusInp} onMouseLeave={notFocusInp} onClick={() => (setLoggedIn(true))}>
+            <Button onMouseEnter={focusInp} onMouseLeave={notFocusInp} onClick={handleLogin}>
               Submit
             </Button>
             <Label 
