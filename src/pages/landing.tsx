@@ -20,8 +20,7 @@ const Landing = () => {
   const [showpwd, setshowpwd] = useState(false);
   const [showLogin, setshowLogin] = useState(true);
   const handleLogin = () => {
-    // Your login logic here
-    setLoggedIn(true); // This will automatically update localStorage
+    setLoggedIn(true); 
   };
   if (loggedIn) {
     return (

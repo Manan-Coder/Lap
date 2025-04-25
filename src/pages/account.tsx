@@ -20,6 +20,14 @@ const Account = () => {
     const toggleOtpSection = () => {
         setShowOtpSection(!showOtpSection);
     }
+    if(!loggedIn)
+    {
+        return(
+            <div className="w-full h-full flex items-center justify-center">
+            <div>signup first lil bro!</div>
+          </div>
+        );
+    }
 
     return(
         <div className="h-full w-full flex items-center justify-center p-8 pt-28">
