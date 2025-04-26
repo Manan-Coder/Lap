@@ -6,6 +6,7 @@ import { ChevronDown, ChevronUp, Eye, EyeOff } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useAuth } from "@/components/AuthContext";
 const Account = () => {
+    const WIP = false
     const [isHovered, setIsHovered] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
     const hello = ["hello","hiii!"]
@@ -20,6 +21,13 @@ const Account = () => {
     const toggleOtpSection = () => {
         setShowOtpSection(!showOtpSection);
     }
+    if(WIP){
+        return(
+        <div className="w-full h-full flex items-center justify-center">
+        <div className="break-normal">Why do you want my account's info naughty kid ; p</div>
+      </div>);
+    }
+
     if(!loggedIn)
     {
         return(

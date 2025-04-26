@@ -14,7 +14,7 @@ const About = () => {
                 </div>
                 <div className="leading-7 text-1xl">
                     <div>
-                    Lap is a coding stats recorder.
+                    Lap is a coding stats recorder. (Its still a WIP :)
                     <br />
                     It's written in React,ChartJS, TypeScript, Rust, Javascript and styled with TailwindCSS.
                     <br />

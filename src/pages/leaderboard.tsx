@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 const Leaderboard = () => {
+    const WIP = true
     const [daily, setDaily] = useState(true)
     const [weekly, setWeekly] = useState(false)
 const daily_members = [
@@ -42,6 +43,11 @@ const weekly_members = [
         time: 980
     }
 ]
+if(WIP){
+    return(      <div className="w-full h-full flex items-center justify-center">
+        <div>Leaderboards are still a WIP!</div>
+      </div>);
+}
 return(
     <div className="h-full w-full flex flex-col items-center justify-center p-8 pt-28 gap-6">
         <div className="flex flex-row gap-8">
