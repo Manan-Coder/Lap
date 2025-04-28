@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp, Eye, EyeOff } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useAuth } from "@/components/AuthContext";
 const Account = () => {
-    const WIP = false
+    const WIP = true
     const [isHovered, setIsHovered] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
     const hello = ["hello","hiii!"]
